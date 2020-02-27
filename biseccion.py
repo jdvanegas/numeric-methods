@@ -2,10 +2,12 @@
 # Solución aproximada para f(x)=0 entre [a, b] por el metodo de la biseccion
 # --------------------------------------------------------------------------
 
+from math import log
+
 
 #Funcion a calcular raiz
 def f(x):
-    return x**3 + x - 1
+    return log(x**2)
 
 
 #Metodo de Bisección
@@ -33,4 +35,4 @@ def biseccion(a, b, t):
         c_n, n))
 
 
-biseccion(0, 1, 1e-3)
+biseccion(0.5, 2, 1e-3)
