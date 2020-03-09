@@ -27,7 +27,7 @@ def pote(x):  # retorna $pote(x)=2^{-x}$
 
 
 def pol(x):  # retorna $pol(x)=\frac{x^2-1}{3}$
-    return (x**2-1)/3
+    return (x**2 - 1) / 3
 
 
 def puntofijo(f, p0, tol, n):  # Método del punto fijo
@@ -35,17 +35,18 @@ def puntofijo(f, p0, tol, n):  # Método del punto fijo
     while i <= n:
         p = (f(p0))
         print("Iter = {0:<2}, p = {1:.16f}".format(i, p))
-        if abs(p-p0) < tol:
+        if abs(p - p0) < tol:
             return p
         p0 = p
         i += 1
     print("Iteraciones agotadas: Error!")
     return
 
+
 # $pol(x)$, $p_0=0.9$, $Tol=10^{-10}$, $N_0=100$
-print ("\n"+r"-- Punto fijo funci\'on pol(x):"+"\n")
+print("\n" + r"-- Punto fijo funci\'on pol(x):" + "\n")
 puntofijo(pol, 0.9, 1e-10, 100)
 
 # $pote(x)$, $p_0=0.5$, $Tol=10^{-8}$, $N_0=100$
-print ("\n"+r"-- Punto fijo funci\'on pote(x):"+"\n")
+print("\n" + r"-- Punto fijo funci\'on pote(x):" + "\n")
 puntofijo(pote, 0.5, 1e-8, 100)
